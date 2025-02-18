@@ -1,6 +1,11 @@
-<div id="<%= dom_id company %>">
-  <p class="my-5">
+<div id="<%= dom_id company %>" class="flex">
+  <p class="my-5 mr-5">
     <strong class="block font-medium mb-1">Name:</strong>
     <%= company.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Company Type:</strong>
+    <%= company.company_type.humanize %>
   </p>
 </div>
