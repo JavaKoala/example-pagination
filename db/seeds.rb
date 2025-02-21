@@ -9,5 +9,5 @@
 #   end
 
 100.times do
-  Company.create!(name: Faker::Company.name)
+  Company.create!(name: Faker::Company.name, company_type: Company.company_types.keys.sample.to_sym)
 end
