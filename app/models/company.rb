@@ -6,7 +6,7 @@ class Company < ApplicationRecord
 
   def self.search(params)
     if params[:name].present?
-      where("name LIKE ?", "%#{params[:name]}%")
+      where("name LIKE ?", "%" + sanitize_sql_like(params[:name]) + "%")
     else
       all
     end
